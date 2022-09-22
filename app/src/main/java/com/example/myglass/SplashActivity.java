@@ -8,28 +8,27 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
-    long time = 2000;   //2000 millisecondi
-
+    long time = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         /* Create a new timer */
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                StartHomeActivity();
+                StartLoginActivity();
             }
         }, time);
     }
 
-    private void StartHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
+    private void StartLoginActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

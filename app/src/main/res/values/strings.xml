@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">MyGlass</string>
+    <string name="menu_Open">Open</string>
+    <string name="menu_Close">Close</string>
+    <string name="Home">Home</string>
+    <string name="Catalogue">Catalogue</string>
+    <string name="Shop">Shop</string>
+    <string name="Logo">Logo</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="Name">Name</string>
+    <string name="Surname">Surname</string>
+    <string name="Email">Email</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="question_account">Already have an account?</string>
+    <string name="question2_account">Do not have an account?</string>
+    <string name="introduction">Hello Friend, we want to be the partner you can trust and offer you solutions and support tailored to your needs, always putting you at the center.
+Our commitment is to support you so that you can benefit from innovation and better service.</string>
+    <string name="guided_experience">For a guided experience</string>
+    <string name="go">Go</string>
 </resources>
