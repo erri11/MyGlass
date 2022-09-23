@@ -1,3 +1,4 @@
+
 package com.example.myglass;
 
 import androidx.annotation.NonNull;
@@ -42,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         navigationView.setItemIconTintList(null);
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -50,14 +52,17 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         Log.i("MENU_DRAWER_TAG", "Home item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navHostFragment, new HomeFragment()).commit();
                         break;
                     case R.id.nav_catalogue:
                         Log.i("MENU_DRAWER_TAG", "Catalogue item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navHostFragment, new CatalogueFragment()).commit();
                         break;
                     case R.id.nav_shop:
                         Log.i("MENU_DRAWER_TAG", "Shop item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navHostFragment, new ShopFragment()).commit();
                         break;
                 }
 
@@ -65,6 +70,10 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        if(savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.navHostFragment, new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
+        }
 
     }
 }

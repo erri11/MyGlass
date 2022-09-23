@@ -12,54 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
-            android:elegantTextHeight="true"
-            android:fontFamily="@font/adamina"
-            android:text="@string/introduction"
-            android:textColor="@color/Navy_Blue"
-            android:textSize="25sp"
-            android:textStyle="bold"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/mobile_navigation">
+        </androidx.fragment.app.FragmentContainerView>
 
-        <TextView
-            android:id="@+id/ge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:elegantTextHeight="true"
-            android:fontFamily="@font/akaya_telivigala"
-            android:text="@string/guided_experience"
-            android:textColor="@color/Navy_Blue"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <Button
-            android:id="@+id/btn_ge"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/button_guided_experience"
-            android:fontFamily="cursive"
-            android:text="@string/go"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ge" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
