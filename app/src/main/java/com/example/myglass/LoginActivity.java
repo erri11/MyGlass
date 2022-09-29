@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //va fatto if
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             }
         } );

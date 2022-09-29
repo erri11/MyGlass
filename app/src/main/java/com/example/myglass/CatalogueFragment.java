@@ -32,7 +32,10 @@ public class CatalogueFragment extends Fragment implements AdapterView.OnItemCli
 
         HttpClient c = new HttpClient();
         c.downloadJson("http://10.0.2.2:4444/getallCatalogue");
-        Occhiale[] occhiali = c.GetOcchiali1();
+        Occhiale[] occhiali = c.GetOcchiali();
+        while (occhiali == null){
+            occhiali = c.GetOcchiali();
+        }
 
         ListView listView = (ListView)view.findViewById(R.id.list_allCatalogue);
         ListAdapter adapter = new ListAdapter(getActivity().getApplicationContext(), occhiali);

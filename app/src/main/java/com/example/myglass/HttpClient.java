@@ -48,16 +48,8 @@ public class HttpClient {
     }
 
     public Occhiale[] GetOcchiali(){
-        while(this.occhiali == null){
-            continue;
-        }
         return this.occhiali;
     }
 
-    public Occhiale[] GetOcchiali1(){
-        while(this.occhiali == null){
-            continue;
-        }
-        return this.occhiali;
-    }
+
 }
