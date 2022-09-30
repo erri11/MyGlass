@@ -19,4 +19,8 @@
 Our commitment is to support you so that you can benefit from innovation and better service.</string>
     <string name="guided_experience">For a guided experience</string>
     <string name="go">Go</string>
+    <string name="add_shop">Add Shop</string>
+    <string name="image_product">Image of Product</string>
+    <string name="price">Prezzo:</string>
+    <string name="euro">€</string>
 </resources>
