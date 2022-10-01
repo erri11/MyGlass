@@ -57,7 +57,7 @@
         android:elegantTextHeight="true"
         android:text="@string/price"
         android:textColor="@color/Red_logo"
-        android:textSize="20sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/occ_prezzo"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,11 +73,13 @@
         android:layout_marginTop="5dp"
         android:elegantTextHeight="true"
         android:textColor="@color/Red_logo"
-        android:textSize="20sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/occ_desc"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="80dp"
         tools:ignore="MissingConstraints,TextContrastCheck" />
 
     <TextView
@@ -88,10 +90,10 @@
         android:elegantTextHeight="true"
         android:textColor="@color/Red_logo"
         android:text="@string/euro"
-        android:textSize="20sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/occ_prezzo"
+        app:layout_constraintStart_toEndOf="@id/occ_prezzo"
         app:layout_constraintTop_toBottomOf="@+id/occ_desc"
         app:layout_constraintHorizontal_bias="0"
         tools:ignore="MissingConstraints,TextContrastCheck" />

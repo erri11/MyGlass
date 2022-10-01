@@ -14,6 +14,8 @@ import android.widget.ListView;
 
 public class FragmentOcchialiSoleU extends Fragment implements AdapterView.OnItemClickListener {
 
+    Occhiale[] occhiali;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class FragmentOcchialiSoleU extends Fragment implements AdapterView.OnIte
 
         HttpClient c = new HttpClient();
         c.downloadJson("http://10.0.2.2:4444/selectOcchialiSoleUomo");
-        Occhiale[] occhiali = c.GetOcchiali();
+        occhiali = c.GetOcchiali();
         while (occhiali == null) {
             occhiali = c.GetOcchiali();
         }
@@ -43,7 +45,10 @@ public class FragmentOcchialiSoleU extends Fragment implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-        // quando viene cliccato compare la schermata con Vuoi aggiungere al carrello?
-
+        FragmentOcchialiDetails occhialiDetails = new FragmentOcchialiDetails(occhiali[position], position);
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(this.getId(), occhialiDetails)
+                .addToBackStack(null)
+                .commit();
     }
 }

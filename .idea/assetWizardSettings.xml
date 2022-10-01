@@ -385,8 +385,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="logo_shop" />
-                            <entry key="sourceFile" value="C:\Users\proto\OneDrive\Desktop\Ingegneria Informatica\TERZO anno\Programmazione ad oggetti\app android studio\formato svg loghi menu a tendina\icons8-carrello-della-spesa-64.svg" />
+                            <entry key="outputName" value="ic_icons8_cestino_64" />
+                            <entry key="sourceFile" value="C:\Users\proto\OneDrive\Desktop\Ingegneria Informatica\TERZO anno\Programmazione ad oggetti\app android studio\formato svg loghi menu a tendina\icons8-cestino-64.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -34,13 +34,11 @@ public class ListAdapter extends ArrayAdapter<Occhiale> {
         ImageView imageView = convertView.findViewById(R.id.occ_img);
         TextView nome = convertView.findViewById(R.id.occ_nome);
         TextView descrizione = convertView.findViewById(R.id.occ_desc);
-      //  TextView prezzo = convertView.findViewById(R.id.occ_prezzo);
 
         Occhiale occhiale = getItem(position);
         imageView.setImageResource(a.ReturnImgId(occhiale.percorso_immagine));
         nome.setText(occhiale.nome);
         descrizione.setText(occhiale.descrizione);
-       // prezzo.setText(Float.toString(occhiale.prezzo));
 
         return convertView;
     }

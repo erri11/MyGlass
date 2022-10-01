@@ -14,6 +14,8 @@ import android.widget.ListView;
 
 public class FragmentLentiSole extends Fragment implements AdapterView.OnItemClickListener {
 
+    private Occhiale[] occhiali;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,12 +29,12 @@ public class FragmentLentiSole extends Fragment implements AdapterView.OnItemCli
 
         HttpClient c = new HttpClient();
         c.downloadJson("http://10.0.2.2:4444/selectLentiSole");
-        Occhiale[] occhiali = c.GetOcchiali();
-        while (occhiali == null){
+        occhiali = c.GetOcchiali();
+        while (occhiali == null) {
             occhiali = c.GetOcchiali();
         }
 
-        ListView listView = (ListView)view.findViewById(R.id.list_lenti_sole);
+        ListView listView = (ListView) view.findViewById(R.id.list_lenti_sole);
         ListAdapter adapter = new ListAdapter(getActivity().getApplicationContext(), occhiali);
 
         listView.setAdapter(adapter);
@@ -42,6 +44,10 @@ public class FragmentLentiSole extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-        // quando viene cliccato compare la schermata con Vuoi aggiungere al carrello?
+        FragmentOcchialiDetails occhialiDetails = new FragmentOcchialiDetails(occhiali[position], position);
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(this.getId(), occhialiDetails)
+                .addToBackStack(null)
+                .commit();
     }
 }

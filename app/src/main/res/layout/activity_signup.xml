@@ -172,5 +172,4 @@
         app:layout_constraintTop_toBottomOf="@+id/button_signup"
         tools:ignore="TextContrastCheck" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
