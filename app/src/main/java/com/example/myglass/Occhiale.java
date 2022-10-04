@@ -1,6 +1,7 @@
 package com.example.myglass;
 
 public class Occhiale {
+    public int occhiale_id;
     public String descrizione;
     public float prezzo;
     public String percorso_immagine;
@@ -10,7 +11,8 @@ public class Occhiale {
 
     }
 
-    public Occhiale(String descrizione, float prezzo, String percorso_immagine, String nome){
+    public Occhiale(String descrizione, float prezzo, String percorso_immagine, String nome, int occhiale_id){
+        this.occhiale_id = occhiale_id;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
         this.percorso_immagine = percorso_immagine;
@@ -47,6 +49,22 @@ public class Occhiale {
 
     public String getCategoria() {
         return nome;
+    }
+
+    public int getOcchiale_id() {
+        return occhiale_id;
+    }
+
+    public void setOcchiale_id(int occhiale_id) {
+        this.occhiale_id = occhiale_id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
